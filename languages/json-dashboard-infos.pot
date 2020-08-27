@@ -1,0 +1,115 @@
+# Copyright (C) 2020 Richard Carlier
+# This file is distributed under the same license as the JSON Dashboard Infos plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: JSON Dashboard Infos 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/json-dashboard-infos\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-08-27T11:45:34+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: json-dashboard-infos\n"
+
+#. Plugin Name of the plugin
+msgid "JSON Dashboard Infos"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/rcarlier/json-dashboard-infos"
+msgstr ""
+
+#. Description of the plugin
+msgid "Get infos from your wordpress, in JSON format, to create centralized dashboards"
+msgstr ""
+
+#. Author of the plugin
+msgid "Richard Carlier"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://carlier.biz"
+msgstr ""
+
+#: includes/admin.php:57
+msgid "JSON to fetch:"
+msgstr ""
+
+#: includes/admin.php:70
+msgid "Security Key"
+msgstr ""
+
+#: includes/admin.php:78
+msgid "Do NOT change without good reasons!"
+msgstr ""
+
+#: includes/admin.php:79
+msgid "If you do, no spaces, no specials cars... (try suggestions bellow)."
+msgstr ""
+
+#: includes/admin.php:80
+msgid "Don't forget to <b>update permalinks</b> if needed..."
+msgstr ""
+
+#: includes/admin.php:91
+msgid "Transient timeout"
+msgstr ""
+
+#: includes/admin.php:96
+msgid "In hour."
+msgstr ""
+
+#: includes/admin.php:99
+msgid "0 to disable the transient (no cache)."
+msgstr ""
+
+#: includes/admin.php:103
+msgid "Reset cache"
+msgstr ""
+
+#: includes/admin.php:108
+msgid "Expose Infos"
+msgstr ""
+
+#: includes/admin.php:113
+msgid "Expose Updates"
+msgstr ""
+
+#: includes/admin.php:118
+msgid "Expose Comments"
+msgstr ""
+
+#: includes/admin.php:123
+msgid "Expose Users"
+msgstr ""
+
+#: includes/admin.php:128
+msgid "Expose Sizes"
+msgstr ""
+
+#: includes/admin.php:135
+msgid "Expose Contents"
+msgstr ""
+
+#: includes/admin.php:141
+msgid "Update"
+msgstr ""
+
+#: includes/admin.php:146
+msgid "JSON generated:"
+msgstr ""
+
+#: includes/get_datas.php:232
+msgid "last registration:"
+msgstr ""
+
+#: includes/tools.php:82
+msgid "Yes"
+msgstr ""
+
+#: includes/tools.php:87
+msgid "No"
+msgstr ""
