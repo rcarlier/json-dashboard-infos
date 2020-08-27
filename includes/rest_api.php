@@ -67,6 +67,7 @@ function jsondi_show_datas()
 {
 	$datas = jsondi_get_datas();
 	header("content-type: application/json; charset=utf-8");
+	header('Access-Control-Allow-Origin: *');
 	print(json_encode($datas));
 }
 
