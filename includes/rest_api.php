@@ -4,7 +4,8 @@
 /**
  * On activation, update permalinks
  */
-function jsondi_activation() {
+function jsondi_activation()
+{
 	jsondi_default_options();
 	jsondi_add_rewrite_rules(null);
 	flush_rewrite_rules();
@@ -16,7 +17,8 @@ function jsondi_activation() {
  * @param array $vars
  * @return type
  */
-function jsondi_add_query_vars($vars) {
+function jsondi_add_query_vars($vars)
+{
 	$vars[] = JSONDI_ROUTE;
 	return $vars;
 }
@@ -27,11 +29,12 @@ function jsondi_add_query_vars($vars) {
  * 
  * @param type $rules
  */
-function jsondi_add_rewrite_rules($rules) {
+function jsondi_add_rewrite_rules($rules)
+{
 	add_rewrite_rule(
-			JSONDI_ROUTE . '/([^/]+)/?$',
-			'index.php?' . JSONDI_ROUTE . '=$matches[1]',
-			"top"
+		JSONDI_ROUTE . '/([^/]+)/?$',
+		'index.php?' . JSONDI_ROUTE . '=$matches[1]',
+		"top"
 	);
 }
 
@@ -41,7 +44,8 @@ function jsondi_add_rewrite_rules($rules) {
  * 
  * @global type $wp_query
  */
-function jsondi_get_my_vars() {
+function jsondi_get_my_vars()
+{
 	global $wp_query;
 	if (isset($wp_query->query_vars[JSONDI_ROUTE])) {
 		$route = get_query_var(JSONDI_ROUTE);
@@ -59,7 +63,8 @@ function jsondi_get_my_vars() {
 /**
  * show datas...
  */
-function jsondi_show_datas() {
+function jsondi_show_datas()
+{
 	$datas = jsondi_get_datas();
 	header("content-type: application/json; charset=utf-8");
 	print(json_encode($datas));
@@ -68,7 +73,8 @@ function jsondi_show_datas() {
 /**
  * Redirect to 404 (if securitykey is wrongà
  */
-function jsondi_securitykey_error() {
+function jsondi_securitykey_error()
+{
 	global $wp_query;
 	$wp_query->set_404();
 	status_header(404);

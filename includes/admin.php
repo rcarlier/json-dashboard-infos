@@ -3,14 +3,16 @@
 /**
  * Enqueue css
  */
-function jsondi_admin_css() {
+function jsondi_admin_css()
+{
 	wp_enqueue_style('jsondi_admin_css', JSONDI_PLUGIN_URL . 'jsondi.css', false);
 }
 
 /**
  * Manage options page...
  */
-function jsondi_options_page() {
+function jsondi_options_page()
+{
 	$options = get_option(JSONDI_OPTIONS);
 	if (!$options) {
 		jsondi_default_options();
@@ -18,7 +20,7 @@ function jsondi_options_page() {
 	}
 
 	// update
-	if ((isset($_POST['nounce_name'])) and ( wp_verify_nonce($_POST['nounce_name'], 'nounce_action'))) {
+	if ((isset($_POST['nounce_name'])) and (wp_verify_nonce($_POST['nounce_name'], 'nounce_action'))) {
 
 		if (isset($_POST['options']['securitykey'])) {
 			$_POST['options']['securitykey'] = sanitize_title($_POST['options']['securitykey']);
@@ -36,14 +38,14 @@ function jsondi_options_page() {
 		update_option(JSONDI_OPTIONS, $_POST['options']);
 		$options = get_option(JSONDI_OPTIONS);
 
-		
+
 		if (isset($_POST['reset_transient'])) {
 			jsondi_update_transient();
 		}
 	}
 
 	// print '<pre>'; print_r($options); print '</pre>';
-	?>
+?>
 
 
 	<div class="wrap">
@@ -75,9 +77,7 @@ function jsondi_options_page() {
 							<tr>
 								<th><label for="securitykey"><?php _e("Security Key", "json-dashboard-infos"); ?></label></th>
 								<td colspan="2">
-									<input type="text" required="" minlength="8"
-										   class="securitykey" name="options[securitykey]" id="securitykey"
-										   value="<?php print $options['securitykey']; ?>">
+									<input type="text" required="" minlength="8" class="securitykey" name="options[securitykey]" id="securitykey" value="<?php print $options['securitykey']; ?>">
 
 
 									<p class="jsondi-warning">
@@ -96,10 +96,8 @@ function jsondi_options_page() {
 							<tr>
 								<th><label for="transient_timeout"><?php _e("Transient timeout", "json-dashboard-infos"); ?></label></th>
 								<td colspan="2">
-									<input type="number" min="0"
-										   class="transient_timeout" name="options[transient_timeout]" id="transient_timeout"
-										   value="<?php print $options['transient_timeout']; ?>">
-										   <?php _e("In hour.", "json-dashboard-infos"); ?>
+									<input type="number" min="0" class="transient_timeout" name="options[transient_timeout]" id="transient_timeout" value="<?php print $options['transient_timeout']; ?>">
+									<?php _e("In hour.", "json-dashboard-infos"); ?>
 
 									<p class="jsondi-warning">
 										<?php _e("0 to disable the transient (no cache).", "json-dashboard-infos"); ?>
@@ -156,5 +154,5 @@ function jsondi_options_page() {
 		</table>
 
 	</div>
-	<?php
+<?php
 }

@@ -3,7 +3,8 @@
 /**
  * Set default options, with random securitykey
  */
-function jsondi_default_options() {
+function jsondi_default_options()
+{
 	// defaults
 	$defaults = array(
 		'securitykey' => jsondi_random_securitykey(),
@@ -21,7 +22,8 @@ function jsondi_default_options() {
 /**
  * Update the transient
  */
-function jsondi_update_transient() {
+function jsondi_update_transient()
+{
 	$options = get_option(JSONDI_OPTIONS);
 	$transient_timeout = $options['transient_timeout'] * HOUR_IN_SECONDS;
 	$datasRaw = jsondi_update_datas();
@@ -36,7 +38,8 @@ function jsondi_update_transient() {
  * @global type $table_prefix
  * @return type
  */
-function jsondi_get_datas($reset = false) {
+function jsondi_get_datas($reset = false)
+{
 
 	$options = get_option(JSONDI_OPTIONS);
 
@@ -98,7 +101,8 @@ function jsondi_get_datas($reset = false) {
  * @global type $wpdb
  * @global type $table_prefix
  */
-function jsondi_update_datas() {
+function jsondi_update_datas()
+{
 	global $wpdb;
 	global $table_prefix;
 
@@ -136,7 +140,8 @@ function jsondi_update_datas() {
  * @param type $to_html
  * @return type
  */
-function jsondi_get_datas_sizes($to_html = false) {
+function jsondi_get_datas_sizes($to_html = false)
+{
 	$upload_dir = wp_upload_dir();
 
 
@@ -173,10 +178,10 @@ function jsondi_get_datas_sizes($to_html = false) {
 	print '<table class="jsondi-table jsondi-tablecompact">';
 	foreach ($datas as $key => $data) {
 		print '<tr>'
-				. '<th>' . $key . '</th>'
-				. '<td align="right">' . $data['size'] . '</td>'
-				. '<td align="right">' . $data['sizeHuman'] . '</td>'
-				. '</tr>';
+			. '<th>' . $key . '</th>'
+			. '<td align="right">' . $data['size'] . '</td>'
+			. '<td align="right">' . $data['sizeHuman'] . '</td>'
+			. '</tr>';
 	}
 	print '</table>';
 }
@@ -189,7 +194,8 @@ function jsondi_get_datas_sizes($to_html = false) {
  * @param type $to_html
  * @return type
  */
-function jsondi_get_datas_updates($to_html = false) {
+function jsondi_get_datas_updates($to_html = false)
+{
 	$updates = wp_get_update_data();
 	$datas = $updates['counts'];
 
@@ -212,7 +218,8 @@ function jsondi_get_datas_updates($to_html = false) {
  * @param type $to_html
  * @return type
  */
-function jsondi_get_datas_users($to_html = false) {
+function jsondi_get_datas_users($to_html = false)
+{
 	global $wpdb;
 	global $table_prefix;
 
@@ -248,7 +255,8 @@ function jsondi_get_datas_users($to_html = false) {
  * @global type $table_prefix
  * @return type
  */
-function jsondi_get_datas_comments($to_html = false) {
+function jsondi_get_datas_comments($to_html = false)
+{
 	global $wpdb;
 	global $table_prefix;
 
@@ -279,7 +287,7 @@ function jsondi_get_datas_comments($to_html = false) {
 		$datas[$type] = $c;
 	}
 
-	$commentsValues = ['waiting', 'approuved', 'spam', 'trash'];
+	$commentsValues = array('waiting', 'approuved', 'spam', 'trash');
 	foreach ($commentsValues as $value) {
 		if (!isset($datas[$value])) {
 			$datas[$value]['count'] = 0;
@@ -292,9 +300,9 @@ function jsondi_get_datas_comments($to_html = false) {
 	print '<table class="jsondi-table jsondi-tablecompact">';
 	foreach ($datas as $key => $data) {
 		print '<tr><th>' . $key . '</th>'
-				. '<td align="right">' . $data['count'] . '</td>'
-				. '<td>' . $data['last_date'] . '</td>'
-				. '</tr>';
+			. '<td align="right">' . $data['count'] . '</td>'
+			. '<td>' . $data['last_date'] . '</td>'
+			. '</tr>';
 	}
 	print '</table>';
 }
@@ -309,7 +317,8 @@ function jsondi_get_datas_comments($to_html = false) {
  * @global type $table_prefix
  * @return type
  */
-function jsondi_get_datas_contents($to_html = false) {
+function jsondi_get_datas_contents($to_html = false)
+{
 	global $wpdb;
 	global $table_prefix;
 
@@ -344,9 +353,9 @@ function jsondi_get_datas_contents($to_html = false) {
 			}
 			$nb++;
 			print '<th>' . $k . '</th>'
-					. '<td align="right">' . $d['count'] . '</td>'
-					. '<td>' . $d['last_date'] . '</td>'
-					. '</tr>';
+				. '<td align="right">' . $d['count'] . '</td>'
+				. '<td>' . $d['last_date'] . '</td>'
+				. '</tr>';
 		}
 	}
 	print '</table>';
@@ -360,7 +369,8 @@ function jsondi_get_datas_contents($to_html = false) {
  * @param type $to_html
  * @return type
  */
-function jsondi_get_datas_infos($to_html = false) {
+function jsondi_get_datas_infos($to_html = false)
+{
 	$datas = array(
 		"name" => get_bloginfo('name'),
 		"favicon" => get_site_icon_url(),

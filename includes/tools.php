@@ -1,11 +1,13 @@
 <?php
+
 /**
  * Get wordpress database size
  * 
  * @global type $wpdb
  * @return type
  */
-function jsondi_get_datas_databaseSize() {
+function jsondi_get_datas_databaseSize()
+{
 	global $wpdb;
 	$dbsize = 0;
 
@@ -24,7 +26,8 @@ function jsondi_get_datas_databaseSize() {
  * @param type $directory
  * @return type
  */
-function jsondi_get_datas_foldersize($directory) {
+function jsondi_get_datas_foldersize($directory)
+{
 	$totalSize = 0;
 	if (is_dir($directory)) {
 		$directoryArray = scandir($directory);
@@ -49,7 +52,8 @@ function jsondi_get_datas_foldersize($directory) {
  * @param type $decimals
  * @return type
  */
-function jsondi_get_datas_human_size($bytes, $decimals = 2) {
+function jsondi_get_datas_human_size($bytes, $decimals = 2)
+{
 	$factor = floor((strlen($bytes) - 1) / 3);
 	if ($factor > 0) {
 		$sz = 'KMGT';
@@ -63,7 +67,8 @@ function jsondi_get_datas_human_size($bytes, $decimals = 2) {
  * @param type $time
  * @return type
  */
-function jsondi_format_time($time) { 
+function jsondi_format_time($time)
+{
 	return sprintf("%02d:%02d:%02d", floor($time / 3600), ($time / 60) % 60, $time % 60);
 }
 
@@ -75,8 +80,9 @@ function jsondi_format_time($time) {
  * @param type $name
  * @param type $value
  */
-function jsondi_radio_yesno($name, $value) {
-	?>
+function jsondi_radio_yesno($name, $value)
+{
+?>
 	<label>
 		<input type="radio" name="<?= $name; ?>" value="Y" <?= ($value == 'Y' ? 'checked' : ''); ?>>
 		<?php _e("Yes", "json-dashboard-infos"); ?>
@@ -87,7 +93,7 @@ function jsondi_radio_yesno($name, $value) {
 		<?php _e("No", "json-dashboard-infos"); ?>
 	</label>
 
-	<?php
+<?php
 }
 
 /**
@@ -95,7 +101,7 @@ function jsondi_radio_yesno($name, $value) {
  * 
  * @return type
  */
-function jsondi_random_securitykey() {
+function jsondi_random_securitykey()
+{
 	return md5(uniqid());
 }
-
