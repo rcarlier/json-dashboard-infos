@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: JSON Dashboard Infos 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/json-dashboard-"
 "infos\n"
-"POT-Creation-Date: 2020-08-27T11:45:34+00:00\n"
-"PO-Revision-Date: 2020-08-27 13:46+0200\n"
+"POT-Creation-Date: 2020-08-27T13:25:55+00:00\n"
+"PO-Revision-Date: 2020-08-27 15:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -41,84 +41,92 @@ msgstr ""
 msgid "https://carlier.biz"
 msgstr ""
 
-#: includes/admin.php:57
+#: includes/admin.php:65
 msgid "JSON to fetch:"
 msgstr "JSON à récupérer :"
 
-#: includes/admin.php:70
+#: includes/admin.php:78
 msgid "Security Key"
 msgstr "Clef de sécurité"
 
-#: includes/admin.php:78
+#: includes/admin.php:84
 msgid "Do NOT change without good reasons!"
 msgstr "NE PAS changer sans de bonnes raisons !"
 
-#: includes/admin.php:79
+#: includes/admin.php:85
 msgid "If you do, no spaces, no specials cars... (try suggestions bellow)."
 msgstr ""
 "Si vous le faites, sans espace ni caractères spéciaux (voir les suggestions "
 "ci dessous)."
 
-#: includes/admin.php:80
+#: includes/admin.php:86
 msgid "Don't forget to <b>update permalinks</b> if needed..."
 msgstr "Ne pas oublier de <b>regénérer les permaliens</b> si nécessaire…"
 
-#: includes/admin.php:91
+#: includes/admin.php:97
 msgid "Transient timeout"
 msgstr "Durée du cache"
 
-#: includes/admin.php:96
+#: includes/admin.php:100
 msgid "In hour."
 msgstr "En heure."
 
-#: includes/admin.php:99
+#: includes/admin.php:103
 msgid "0 to disable the transient (no cache)."
 msgstr "0 pour désactiver les données transitoires (pas de cache)."
 
-#: includes/admin.php:103
+#: includes/admin.php:107
 msgid "Reset cache"
 msgstr "Actualiser le cache"
 
-#: includes/admin.php:108
+#: includes/admin.php:112
+msgid "Code"
+msgstr "Code"
+
+#: includes/admin.php:117
+msgid "If needed..."
+msgstr "Si besoin…"
+
+#: includes/admin.php:122
 msgid "Expose Infos"
 msgstr "Exposer les infos"
 
-#: includes/admin.php:113
+#: includes/admin.php:127
 msgid "Expose Updates"
 msgstr "Exposer les mises à jour"
 
-#: includes/admin.php:118
+#: includes/admin.php:132
 msgid "Expose Comments"
 msgstr "Exposer les commentaires"
 
-#: includes/admin.php:123
+#: includes/admin.php:137
 msgid "Expose Users"
 msgstr "Exposer les utilisateurs"
 
-#: includes/admin.php:128
+#: includes/admin.php:142
 msgid "Expose Sizes"
 msgstr "Exposer les tailles"
 
-#: includes/admin.php:135
+#: includes/admin.php:149
 msgid "Expose Contents"
 msgstr "Exposer les contenus"
 
-#: includes/admin.php:141
+#: includes/admin.php:155
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: includes/admin.php:146
+#: includes/admin.php:160
 msgid "JSON generated:"
 msgstr "JSON généré :"
 
-#: includes/get_datas.php:232
+#: includes/get_datas.php:245
 msgid "last registration:"
 msgstr "dernière inscription :"
 
-#: includes/tools.php:82
+#: includes/tools.php:88
 msgid "Yes"
 msgstr "Oui"
 
-#: includes/tools.php:87
+#: includes/tools.php:93
 msgid "No"
 msgstr "Non"

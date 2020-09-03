@@ -2,24 +2,21 @@
 
 Plugin Name: JSON Dashboard Infos
 Plugin URI: https://github.com/rcarlier/json-dashboard-infos
-Description: Get infos from your wordpress, in JSON format, to create centralized dashboards
+Description: Expose informations from your Wordpress, in JSON format, to allow you to create centralized dashboards (not included ...)
 Tags: json, dashboard, api, export data, stats, comments
 Author: Richard Carlier
 Author URI: https://carlier.biz/
-Requires at least: 5.3
-Tested up to: 5.3
-Requires PHP: 5.2.4
+Requires at least: 4.9
+Tested up to: 4.9
+Requires PHP: 5.3.29
 License: GPL v3 or later
 License URI: http://www.gnu.org/licenses/
 
-Expose in JSON format some technical information, to create dashboard
+Expose informations from your Wordpress, in JSON format, to allow you to create centralized dashboards (not included ...)
 
 == Description ==
 
-This is useful for situations such as:
-
-* Track certain indicators on several wordpress
-* Coupled with a dashboard, via json requests, in a javascript context, react, etc. (not provided)
+The basic idea is to be able to build a dashboard centralizing information from several Wordpress, and thus monitor them all at once ...
 
 Warning : this plugin is mostly technical...
 

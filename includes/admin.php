@@ -21,6 +21,9 @@ function jsondi_options_page()
 
 	// update
 	if ((isset($_POST['nounce_name'])) and (wp_verify_nonce($_POST['nounce_name'], 'nounce_action'))) {
+		if (isset($_POST['reset_transient'])) {
+			jsondi_file_delete($options["securitykey"]); // delete file, clear cache
+		}
 
 		if (isset($_POST['options']['securitykey'])) {
 			$_POST['options']['securitykey'] = sanitize_title($_POST['options']['securitykey']);
@@ -37,14 +40,7 @@ function jsondi_options_page()
 		}
 		update_option(JSONDI_OPTIONS, $_POST['options']);
 		$options = get_option(JSONDI_OPTIONS);
-
-
-		if (isset($_POST['reset_transient'])) {
-			jsondi_update_transient();
-		}
 	}
-
-	// print '<pre>'; print_r($options); print '</pre>';
 ?>
 
 
@@ -106,6 +102,18 @@ function jsondi_options_page()
 										<input type="checkbox" name="reset_transient" value="Y">
 										<?php _e("Reset cache", "json-dashboard-infos"); ?>
 									</label>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="code"><?php _e("Code", "json-dashboard-infos"); ?></label>
+								</th>
+								<td colspan="2">
+									<input type="text" class="code" name="options[code]" id="code" value="<?php print $options['code']; ?>">
+
+									<p class="jsondi-warning">
+										<?php _e("If needed...", "json-dashboard-infos"); ?>
+									</p>
 								</td>
 							</tr>
 							<tr>

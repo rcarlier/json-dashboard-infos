@@ -10,6 +10,10 @@
     font-family: monospace;
     width: 100%;
 }
+.jsondi-table .code {
+    font-family: monospace;
+    width: 100%;
+}
 
 .jsondi-tablecompact {
     border-spacing: 0;
@@ -36,26 +40,20 @@
 }
 
 .jsondi-table .jsondi-col-left,
-.jsondi-table .jsondi-col-right{
-	width: 100%;
-	display: block;
+.jsondi-table .jsondi-col-right {
+    width: 100%;
+    display: block;
 }
 
 @media screen and (min-width: 1300px) {
-	.jsondi-table .jsondi-col-left,
-	.jsondi-table .jsondi-col-right{
-		width: 50%;
-		display: table-cell;
-	}
+    .jsondi-table .jsondi-col-left,
+    .jsondi-table .jsondi-col-right {
+        width: 50%;
+        display: table-cell;
+    }
 }
-
-
-
-
-
-
 
 .jsondi-table .jsondi-warning {
     font-size: 10px;
-	font-style: italic;
+    font-style: italic;
 }
