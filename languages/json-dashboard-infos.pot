@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-08-27T13:25:55+00:00\n"
+"POT-Creation-Date: 2020-09-09T10:37:47+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: json-dashboard-infos\n"
@@ -34,90 +34,90 @@ msgstr ""
 msgid "https://carlier.biz"
 msgstr ""
 
-#: includes/admin.php:65
+#: includes/admin.php:61
 msgid "JSON to fetch:"
 msgstr ""
 
-#: includes/admin.php:78
+#: includes/admin.php:74
 msgid "Security Key"
 msgstr ""
 
-#: includes/admin.php:84
+#: includes/admin.php:80
 msgid "Do NOT change without good reasons!"
 msgstr ""
 
-#: includes/admin.php:85
+#: includes/admin.php:81
 msgid "If you do, no spaces, no specials cars... (try suggestions bellow)."
 msgstr ""
 
-#: includes/admin.php:86
+#: includes/admin.php:82
 msgid "Don't forget to <b>update permalinks</b> if needed..."
 msgstr ""
 
-#: includes/admin.php:97
+#: includes/admin.php:93
 msgid "Transient timeout"
 msgstr ""
 
-#: includes/admin.php:100
+#: includes/admin.php:96
 msgid "In hour."
 msgstr ""
 
-#: includes/admin.php:103
+#: includes/admin.php:99
 msgid "0 to disable the transient (no cache)."
 msgstr ""
 
-#: includes/admin.php:107
+#: includes/admin.php:103
 msgid "Reset cache"
 msgstr ""
 
-#: includes/admin.php:112
+#: includes/admin.php:109
 msgid "Code"
 msgstr ""
 
-#: includes/admin.php:117
+#: includes/admin.php:115
 msgid "If needed..."
 msgstr ""
 
-#: includes/admin.php:122
+#: includes/admin.php:120
 msgid "Expose Infos"
 msgstr ""
 
-#: includes/admin.php:127
+#: includes/admin.php:125
 msgid "Expose Updates"
 msgstr ""
 
-#: includes/admin.php:132
+#: includes/admin.php:130
 msgid "Expose Comments"
 msgstr ""
 
-#: includes/admin.php:137
+#: includes/admin.php:135
 msgid "Expose Users"
 msgstr ""
 
-#: includes/admin.php:142
+#: includes/admin.php:140
 msgid "Expose Sizes"
 msgstr ""
 
-#: includes/admin.php:149
+#: includes/admin.php:147
 msgid "Expose Contents"
 msgstr ""
 
-#: includes/admin.php:155
+#: includes/admin.php:153
 msgid "Update"
 msgstr ""
 
-#: includes/admin.php:160
+#: includes/admin.php:158
 msgid "JSON generated:"
 msgstr ""
 
-#: includes/get_datas.php:245
+#: includes/get_datas.php:252
 msgid "last registration:"
 msgstr ""
 
-#: includes/tools.php:88
+#: includes/tools.php:155
 msgid "Yes"
 msgstr ""
 
-#: includes/tools.php:93
+#: includes/tools.php:160
 msgid "No"
 msgstr ""
